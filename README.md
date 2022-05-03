@@ -1,2 +1,2 @@
-# GO-CI-CD-DOCKER
-DOCKER WITH CICD GOLANG
+# belajar-cicd-pemula
+Repositori untuk belajar membuat CI/CD lewat Github Actions (dari video youtube https://youtube.com/user/girikuncoro))
