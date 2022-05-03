@@ -1,13 +1,5 @@
-FROM golang:1.17-alpine
+FROM golang:latest
 
-WORKDIR /app
+COPY main.go /app/main.go
 
-COPY go.mod ./
-COPY *.go ./
-COPY static ./static
-
-RUN go build -o /belajar-cicd-pemula
-
-EXPOSE 3000
-
-CMD ["/GO-CI-CD-DOCKER"]
+CMD ["go","run","/app/main.go"]

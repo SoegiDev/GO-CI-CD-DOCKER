@@ -1,12 +1,14 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"net/http"
 )
 
 func main() {
-	http.Handle("/", http.FileServer(http.Dir("./static")))
-	log.Println("listening on port 3000...")
-	http.ListenAndServe(":3000", nil)
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hello World! Fajar Soegi")
+	})
+
+	http.ListenAndServe(":8080", nil)
 }
